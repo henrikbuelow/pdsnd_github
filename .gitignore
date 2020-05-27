@@ -1,0 +1,8 @@
+# Ignore chicago.csv file
+chicago.csv
+
+# Ignore new_york_city.csv file
+new_york_city.csv
+
+# Ignore washington.csv file
+washington.csv
