@@ -202,7 +202,7 @@ def convert_to_weekday(day_number):
         (str) - name of the weekday
     """
     weekday = ''
-    
+
     if day_number == 0:
         weekday = "Monday"
     if day_number == 1:
@@ -341,14 +341,14 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
 
-        view_data = input('\nWould you like to see the first 5 lines of data? Enter yes or no.\n')
+        view_data = input('\nWould you like to see the first 7 lines of data? Enter yes or no.\n')
         i = 0
-        j = 5
+        j = 7
         while view_data.lower() == 'yes':
             print(df.iloc[i:j])
-            view_data = input('\nWould you like to see the next more 5 lines of data? Enter yes or no.\n')
-            i += 5
-            j += 5
+            view_data = input('\nWould you like to see the next 7 more lines of data? Enter yes or no.\n')
+            i += 7
+            j += 7
 
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
