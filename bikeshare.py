@@ -75,14 +75,38 @@ def convert_day_input(invalid_day):
 
     if invalid_day == 'mon' or invalid_day == '1' or invalid_day == 'monday':
         valid_day = 0
+<<<<<<< HEAD
 
     if invalid_day == 'tue' or invalid_day == '2' or invalid_day == 'tuesday' or invalid_day == 'tues':
+||||||| a962f53
+    
+    if invalid_day == 'tue' or invalid_day == '2' or invalid_day == 'tuesday':
+=======
+
+    if invalid_day == 'tue' or invalid_day == '2' or invalid_day == 'tuesday':
+>>>>>>> documentation
         valid_day = 1
+<<<<<<< HEAD
 
     if invalid_day == 'wed' or invalid_day == '3' or invalid_day == 'wednesday' or invalid_day == 'wednes':
+||||||| a962f53
+    
+    if invalid_day == 'wed' or invalid_day == '3' or invalid_day == 'wednesday':
+=======
+
+    if invalid_day == 'wed' or invalid_day == '3' or invalid_day == 'wednesday':
+>>>>>>> documentation
         valid_day = 2
+<<<<<<< HEAD
 
     if invalid_day == 'thu' or invalid_day == '4' or invalid_day == 'thursday' or invalid_day == 'thurs':
+||||||| a962f53
+        
+    if invalid_day == 'thu' or invalid_day == '4' or invalid_day == 'thursday':
+=======
+
+    if invalid_day == 'thu' or invalid_day == '4' or invalid_day == 'thursday':
+>>>>>>> documentation
         valid_day = 3
 
     if invalid_day == 'fri' or invalid_day == '5' or invalid_day == 'friday':
@@ -126,7 +150,14 @@ def get_filters():
     # get user input for month and safe input as number of each month
     valid_month_input = [1, 2, 3, 4, 5, 6, 9]
     month = input('Do you want to filter by month?\nIf yes, which month - January, February, March, April, May, or June?\nIf no, than tip \'all\'.\n').lower()
+<<<<<<< HEAD
 
+||||||| a962f53
+    
+=======
+
+    # check if user input can be converted to a valid user input
+>>>>>>> documentation
     if month not in valid_month_input:
         month = convert_month_input(month)
 
@@ -221,6 +252,12 @@ def convert_to_weekday(day_number):
     return weekday
 
 
+<<<<<<< HEAD
+||||||| a962f53
+    
+=======
+
+>>>>>>> documentation
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
@@ -336,21 +373,44 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
+        # call functions for statistical calculations
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
+<<<<<<< HEAD
 
         view_data = input('\nWould you like to see the first 7 lines of data? Enter yes or no.\n')
+||||||| a962f53
+        
+        view_data = input('\nWould you like to see the first 5 lines of data? Enter yes or no.\n')
+=======
+
+        view_data = input('\nWould you like to see the first 5 lines of data? Enter yes or no.\n')
+>>>>>>> documentation
         i = 0
         j = 7
         while view_data.lower() == 'yes':
             print(df.iloc[i:j])
+<<<<<<< HEAD
             view_data = input('\nWould you like to see the next 7 more lines of data? Enter yes or no.\n')
             i += 7
             j += 7
 
 
+||||||| a962f53
+            view_data = input('\nWould you like to see the next more 5 lines of data? Enter yes or no.\n')
+            i += 5
+            j += 5
+            
+        
+=======
+            view_data = input('\nWould you like to see the next more 5 lines of data? Enter yes or no.\n')
+            i += 5
+            j += 5
+
+
+>>>>>>> documentation
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
