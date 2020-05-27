@@ -93,7 +93,7 @@ def convert_day_input(invalid_day):
 
     if invalid_day == 'sun' or invalid_day == '7' or invalid_day == 'sunday':
         valid_day = 6
-        
+
     if invalid_day == 'all':
         valid_day = 9
 
@@ -201,20 +201,24 @@ def convert_to_weekday(day_number):
     Returns:
         (str) - name of the weekday
     """
+    weekday = ''
+    
     if day_number == 0:
-        return "Monday"
+        weekday = "Monday"
     if day_number == 1:
-        return "Tuesday"
+        weekday = "Tuesday"
     if day_number == 2:
-        return "Wednesday"
+        weekday = "Wednesday"
     if day_number == 3:
-        return "Thursday"
+        weekday = "Thursday"
     if day_number == 4:
-        return "Friday"
+        weekday = "Friday"
     if day_number == 5:
-        return "Saturday"
+        weekday = "Saturday"
     if day_number == 6:
-        return "Sunday"
+        weekday = "Sunday"
+
+    return weekday
 
 
 def time_stats(df):
