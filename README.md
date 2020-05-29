@@ -5,7 +5,7 @@
 pdsnd_github
 
 ### Description
-Importing data, calculating statistical values and displaying them in a user interface
+Importing data, calculating statistical values and displaying them in a user interface using data form a bikesharing company.
 
 ### Files used
 chicago.csv, new_york_city.csv, washington.csv
